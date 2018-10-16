@@ -33,8 +33,10 @@ y0=50
 if random.random() < 0.5:
     x0 +=1
     x0 -=1
+ 
     
-
+x1=50
+y1=50
 
 
 random_number = random.random()
