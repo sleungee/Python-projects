@@ -1,4 +1,5 @@
-
+# This implements an ABM system
+# last updated 4th Dec. 2018
 import random
 import matplotlib
 def distance (agent1, agent2):
