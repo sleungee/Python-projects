@@ -6,6 +6,14 @@ Created on Tue Oct 30 16:11:11 2018
 """
 import matplotlib
 import random
+import csv
+f = open('data.csv', newline='') 
+reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+for row in reader:				# A list of rows
+    for value in row:				# A list of value
+        print(value) 				# Floats
+f.close() 	# Don't close until you are done with the reader;
+		# the data is read on request.
 
 
 
