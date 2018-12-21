@@ -1,3 +1,4 @@
 Understanding the model
 The Model works in relation to the framework which defines the behaviour of the Agent.
 The 'Agents in the environment' is the first step of getting the agents into the environment.
+The 'animation model' depicts an attempt to animate the attempt at a stop function.  
