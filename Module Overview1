@@ -3,5 +3,9 @@ Welcome to Sam's Agent-Based Model
 In This Python project we attempted to learn the basics of the programming knowledge that is vital for the use in Spatial Analytics. For this we learnt to write a programme using bespoke software tools including the Anaconda package,which visualised the code while being written. As the platform for displaying my code, I am here on Github so that it is viewable to all who are interested in the project! There are a variety of functions Github can be used including creating a online portfolio for everyone to view. 
 
 Agent-Based Modelling.
-For this we had to learn the fundimental skills including learning the concept of Agent Based Moddeling. This Concept is based upon the increase in computer capability allowing models to be produced. By giving individuals or objects behaviours to interact with each other and their environment.     
+For this we had to learn the fundimental skills including learning the concept of Agent Based Modeling. This Concept is based upon the increase in computer capability allowing models to be produced. By giving individuals or objects behaviours to interact with each other and their environment.
+The ABM we produced involved three key elements:
+-Model: this is where the user manages the model including:the iterations of the functions.
+-Framework- This is what defines what the 'agents' are and can do. This defines the behaviours of the agent and how thy interact ith the enviironment around them. In my case the agents were sheep exploring the raster file [explained next], eating the environment. 
+Environment- This is our raster data file detailing the environment for our sheep to be eating! 
  
