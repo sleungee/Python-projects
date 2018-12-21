@@ -1,0 +1,69 @@
+import random
+import operator
+import matplotlib.pyplot
+import agent_framework as af 
+import matplotlib.animation 
+import csv
+    
+num_of_agents = 10
+num_of_iterations = 100 # number of repetitions 
+agents = []
+neighbourhood = 20
+
+fig = matplotlib.pyplot.figure(figsize=(7, 7))
+ax = fig.add_axes([0, 0, 1, 1])
+
+#difining the distance of the agents
+def distance (agent1, agent2):
+        y_diff = (agent1.y - agent2.y)
+        y_diffsq = y_diff * y_diff
+        x_diff = (agent1.x - agent2.y)
+        x_diffsq = x_diff * x_diff
+        sum = y_diffsq + x_diffsq
+        answer = sum**0.5
+        print(answer)  
+'''        
+#this is for creating the raster "environment" in the grid where the 
+'agents' will be be animated in.'''      
+environment = []
+f = open('in.text.txt') #routing to the raster file for the environment  
+#routing to the in.txt file
+reader = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+for row in reader:				
+    rowlist = []
+    for value in row:				
+     rowlist.append(value) 				
+    environment.append(rowlist)
+f.close() 	
+print(value)		
+
+#creating agents in regard to the framework
+for i in range (num_of_agents):
+    agents.append(af.Agent(environment, agents))
+    
+    carry_on = True	
+	
+def update(frame_number):
+    
+    fig.clear()   
+    global carry_on     
+
+    if (carry_on):
+
+# Here we're calling the functions from the framework  
+        for j in range(num_of_iterations):
+            print("iteration",j)              
+            for i in range (num_of_agents):
+                agents[i].move()
+                agents[i].eat()
+                agents[i].share_with_neighbours(neighbourhood)
+
+
+
+#this is the graph plotting the agents into environemnt, where they should eat the environment. 
+matplotlib.pyplot.imshow(environment)
+matplotlib.pyplot.xlim(0, 99)
+matplotlib.pyplot.ylim(0, 99)
+for i in range(num_of_agents):
+    matplotlib.pyplot.scatter(agents[i].x,agents[i].y)
+matplotlib.pyplot.show(agents)
