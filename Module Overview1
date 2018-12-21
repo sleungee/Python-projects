@@ -9,3 +9,4 @@ The ABM we produced involved three key elements:
 -Framework- This is what defines what the 'agents' are and can do. This defines the behaviours of the agent and how thy interact ith the enviironment around them. In my case the agents were sheep exploring the raster file [explained next], eating the environment. 
 Environment- This is our raster data file detailing the environment for our sheep to be eating! 
  
+ 
